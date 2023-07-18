@@ -50,5 +50,23 @@ public with sharing class TrainingCode1 {
             }
         }
     }
+    public static Lead createLeadRecord(String lastName,String email,String companyName,Date DateofBirth) {
+        Lead leadRecordToInsert = new Lead(LastName =lastName,Email=email, Company=companyName );
+        insert leadRecordToInsert;
+        return leadRecordToInsert;
+    }
+    public static Lead createLeadRecord(Date DateofBirth,string lastName,string company)
+    {
+        if(DateofBirth == null){
+            DateofBirth = Date.newInstance(1990, 01, 01);
+        }
+        Lead newLead = new Lead();
+        newLead.Birthdate__c=DateofBirth;
+        newLead.LastName=lastName;
+        newLead.Company=company;
+        insert newLead;
+        return newLead;
+    }
+    
     
 }
