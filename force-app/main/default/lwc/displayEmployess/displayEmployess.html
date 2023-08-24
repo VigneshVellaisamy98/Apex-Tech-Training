@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="Form">
+        <div class="sdls-m-left_small">
+        <form>
+            <lightning-input type="text" label="Enter First Name" onchange={dataForm} name = 'firstName'></lightning-input>
+            <lightning-input type="text" label="Enter Last Name" onchange={dataForm} name = 'lastName'></lightning-input>
+            <lightning-input type="email" label="Enter email" onchange={dataForm} name = 'email'></lightning-input>
+            <lightning-input type="text" label="Enter Phone" class="slds-m-top_medium" onchange={dataForm} name = 'phone'></lightning-input>
+            <lightning-input type="text" label="Generated ContactId" class="slds-m-top_medium" value={generatedContactId}></lightning-input>
+            <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </form>
+    </div>
+    </lightning-card>
+    
+</template>

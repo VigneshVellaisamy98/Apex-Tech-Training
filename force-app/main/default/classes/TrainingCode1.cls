@@ -67,6 +67,40 @@ public with sharing class TrainingCode1 {
         insert newLead;
         return newLead;
     }
+    //create account with contact
+    public static void createAccountContact(String accountName,String contactFirstName,String contactLastName,String contactEmail){
+        Account newAccount = new Account();
+        newAccount.Name = accountName;
+        insert newAccount;
+        Contact  newContact = new Contact();
+        newContact.FirstName = contactFirstName;
+        newContact.LastName = contactLastName;
+        newContact.Email = contactEmail;
+        newContact.AccountId = newAccount.Id;
+        insert newContact;
+        System.debug('running successfully!!');
+    }
     
-    
+    //create leads in bulk
+
+    public static void leadsInBulk(Integer numofLeads){
+        List<Lead> leadToCreate = new List<Lead>();
+
+        String defaultCompany = '4i apps';
+        String defaultFirstName = 'Test';
+
+        for(Integer i = 0 ; i<numofLeads ; i++){
+            Lead newlead = new Lead();
+            newlead.FirstName = defaultFirstName;
+            newlead.LastName = defaultFirstName + i;
+            newlead.Email = defaultFirstName + '.' + defaultFirstName + i + '@4iapps.com';
+            newlead.Company = defaultCompany;
+
+            leadToCreate.add(newlead);
+        }
+        if(!leadToCreate.isEmpty()){
+            insert leadToCreate;
+            System.debug(numofLeads);
+        }
+    }
 }

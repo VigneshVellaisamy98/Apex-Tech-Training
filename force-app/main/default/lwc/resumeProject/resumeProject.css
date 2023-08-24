@@ -1,0 +1,19 @@
+/* Add any custom styling you'd like */
+/* A4 width */
+/* A4 height */
+.resume-card {
+    width: 210mm; 
+    height: 297mm; 
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 12pt;
+} 
+
+.section {
+    margin: 1.5rem 0;
+}
+
+.lightningCard{
+    
+}

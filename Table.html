@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    #container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .form-container{
+        background: url(https://mobimg.b-cdn.net/v3/fetch/6d/6dd4ffa036181246ee107c961b9c8abb.jpeg?h=1400);
+        margin-top: 50px;
+        width: 600px;
+        margin-bottom: 50px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(236, 6, 6, 0.1);;
+    }
+
+    .form-input {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .form-button {
+        background-color: transparent;
+        color: rgb(239, 233, 233);
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .form-button:hover {
+        transition: 0.5s;
+        background-color: #0056b3;
+    }
+    .button{
+        background-color: white;
+        color: rgb(7, 5, 5);
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button{
+        transition: 0.5s;
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <div id="container1">
+        <table border="10">
+            <tr>
+                <th>Employee Name</th>
+                <th>Employee Id</th>
+                <th>Emplyoee Email</th>
+                <th>Employee Phone_No</th>
+                <th>Employee Address</th>
+            </tr>
+            <tr class="Emp_1">
+                <td>Vignesh.V <i class="fa-solid fa-person"></i></td>
+                <td>1454</td>
+                <td>vigneshdv21@gmail.com</td>
+                <td>7397072252</td>
+                <td>Mexico</td>
+            </tr>
+            <tr class="Emp_2">
+                <td>Mohan Raj <i class="fa-solid fa-person"></i></td>
+                <td>1455</td>
+                <td>mohan21@gmail.com</td>
+                <td>7397072253</td>
+                <td>Boston</td>
+            </tr>
+            <tr class="Emp_3">
+                <td>Pavanavi <i class="fa-solid fa-person"></i></td>
+                <td>1456</td>
+                <td>pavanvi21@gmail.com</td>
+                <td>7397072254</td>
+                <td>lakewood</td>
+            </tr>
+            <tr class="Emp_4">
+                <td>John Wick <i class="fa-solid fa-person"></i></td>
+                <td>1457</td>
+                <td>Johnathanvi@gmail.com</td>
+                <td>7397072255</td>
+                <td>Bronville</td>
+            </tr>
+            <tr class="Emp_5">
+                <td>Riddler Shelby <i class="fa-solid fa-person"></i></td>
+                <td>1458</td>
+                <td>shlebywine@gmail.com</td>
+                <td>7397072256</td>
+                <td>Ohio</td>
+            </tr>
+            <tr class="Emp_6">
+                <td>Tom dom <i class="fa-solid fa-person"></i></td>
+                <td>1459</td>
+                <td>tomdomvi@gmail.com</td>
+                <td>7397072257</td>
+                <td>sydney</td>
+            </tr>
+            <tr class="Emp_7">
+                <td>Bruce Wayne <i class="fa-solid fa-person"></i></td>
+                <td>1460</td>
+                <td>brucebat@gmail.com</td>
+                <td>7397072258</td>
+                <td>Gothom</td>
+            </tr>
+            <tr class="Emp_8">
+                <td>Steve R <i class="fa-solid fa-person"></i></td>
+                <td>1461</td>
+                <td>Steveamerica@gmail.com</td>
+                <td>7397072259</td>
+                <td>Brooklyn</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <input type="text" class="form-input" placeholder="Enter your First Name"><br>
+            <input type="text" class="form-input" placeholder="Enter your Last Name"><br>
+            <input type="email" class="form-input" placeholder="Enter your Email"><br>
+            <input type="phone" class="form-input" placeholder="Enter your Phone"><br>
+            <input type="text" class="form-input" placeholder="Enter your Company"><br>
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div><br>
+
+    <table border="1">
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Id</th>
+            <th>Emplyoee Email</th>
+            <th>Employee Phone_No</th>
+            <th>Employee Address</th>
+        </tr>
+        <tr>
+            <td><input type="text" class="table_input" placeholder="Enter your First Name"></td>
+            <td><input type="text" class="table_input" placeholder="Enter your Employee Id"></td>
+            <td><input type="email" class="table_input" placeholder="Enter your Email"></td>
+            <td><input type="phone" class="table_input" placeholder="Enter your Phone"></td>
+            <td><input type="phone" class="table_input" placeholder="Enter your Address"></td>
+        </tr>
+    </table><br>
+
+    <div><button type="submit" class="button">Submit</button></div>
+
+    <script src="https://kit.fontawesome.com/c12bb7d336.js" crossorigin="anonymous"></script>
+</body>
+</html>

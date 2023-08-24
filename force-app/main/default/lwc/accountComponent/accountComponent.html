@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Account Button">
+    <div class="account_Container">
+        <template for:each={accountsList} for:item="currentAccount">
+            <lightning-button variant="brand" label={currentAccount.Name}  onclick={handleClick} key={currentAccount.Id}  id={currentAccount.Id}>
+            </lightning-button>
+        </template> 
+    </div>
+</lightning-card>
+</template>

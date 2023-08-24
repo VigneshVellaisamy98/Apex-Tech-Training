@@ -1,0 +1,29 @@
+<!-- <template>
+    <lightning-card title="Choose Account Name">
+        <lightning-datatable data={Conatcs} columns={columns} key-field="Id"></lightning-datatable>
+    </lightning-card>
+</template> -->
+
+<template>
+    <lightning-card title="Get Related Contacts" icon-name="standard:contact">
+            <div class="container">
+                <h2>Retrieve Related Contacts</h2>
+                <div class="input-section">
+                    <label for="accountName">Enter Account Name:</label>
+                    <input type="text" id="accountName"  onkeyup={handleAccountChange}>
+                    <button onclick={retrieveContacts}>Retrieve Contacts</button>
+                </div>
+                <div class="contact-list" if:true={contacts.length}>
+                    <h3>Related Contacts:</h3>
+                    <ul>
+                        <template for:each={contacts} for:item="contact">
+                            <li key={contact.Id}>
+                                Contact Name: {contact.FirstName} {contact.LastName} | Contact ID: {contact.Id} | Contact Phone: {contact.Phone}
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <p if:true={showNoResults} class="no-results">No contacts found for the provided account name.</p>
+            </div>
+    </lightning-card>
+</template>

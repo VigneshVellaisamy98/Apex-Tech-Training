@@ -1,5 +1,5 @@
 public with sharing class AccountContactCreation {
-    public static void createAccountWithContact(String accountName, String contactFirstName, String contactLastName, String contactEmail){
+    public static void createAccountContact(String accountName, String contactFirstName, String contactLastName, String contactEmail){
         Account newAccount = new Account();
          newAccount.Name = accountName;
          insert newAccount;
@@ -11,16 +11,13 @@ public with sharing class AccountContactCreation {
          newContact.AccountId = newAccount.Id;
          insert newContact;
 
-         System.debug('account and contact created successfully');
+         System.debug('Successfully Created!!');
     }
 
-    public static void createLeadsInBulk(Integer numberOfLeads) {
+    public static void LeadsInBulk(Integer numberOfLeads) {
         List<Lead> leadsToCreate = new List<Lead>();
         
-        // Default values for the leads
-        // String defaultLastName = 'Test 1';
         String defaultCompany = '4i apps';
-        // String defaultEmail = 'test.test@4iapps.com';
         String defaultPhone = '1234567890';
         
         for (Integer i = 0; i < numberOfLeads; i++) {
@@ -33,7 +30,7 @@ public with sharing class AccountContactCreation {
             leadsToCreate.add(newLead);
         }
         
-        // Insert the leads in bulk
+        // Insert the leads in bulk in the lead object
         if (!leadsToCreate.isEmpty()) {
             insert leadsToCreate;
             System.debug(numberOfLeads + ' Leads created successfully!');
